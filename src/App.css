@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -9,6 +8,7 @@
 }
 
 .App-header {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,4 +29,24 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+form {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  background-color: #f1f1f1;
 }

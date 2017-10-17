@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const List = props => (
-  <ul>
-    {
-      props.items.map((item, index) => <li key={index}>{item}</li>)
-    }
-  </ul>
-);
-
-export default List;
+export default class List extends Component {
+    render() {
+    return (
+      this.props.items.map((item, index) => 
+        <li key={index} className="list__item" draggable="true">
+          <label>
+            <input type="checkbox" onChange={this.props.oncheck} />
+            {item}
+          </label>
+          <button onClick={this.props.onremove} item={index}>x</button>
+        </li>
+      ) 
+    )
+  }
+};
